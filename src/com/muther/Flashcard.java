@@ -2,20 +2,19 @@ package com.muther;
 
 public class Flashcard {
 
-    private String front;
-    private String back;
+    private String term;
+    private String definition;
 
-    public Flashcard(String front, String back) {
-        this.front = front;
-        this.back = back;
+    public Flashcard(String term, String definition) {
+        this.term = term;
+        this.definition = definition;
     }
 
-    public String getFront() {
-        return front;
+    public String getTerm() {
+        return term;
     }
 
-    public String getBack() {
-        return back;
+    public String getDefinition() {
+        return definition;
     }
-
 }

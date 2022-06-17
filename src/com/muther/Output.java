@@ -2,13 +2,13 @@ package com.muther;
 
 public class Output {
 
-    private final String CARD = "Card:";
-    private final String DEFINITION = "Definition:";
-
-    public Output(Flashcard f) {
-        System.out.println(CARD);
-        System.out.println(f.getFront());
-        System.out.println(DEFINITION);
-        System.out.println(f.getBack());
+    public Output(Flashcard card, String answer) {
+        final String CORRECT = "Correct!";
+        final String WRONG = "Wrong. The right answer is \"%s\".\n";
+        if (card.getDefinition().equals(answer)) {
+            System.out.println(CORRECT);
+        } else {
+            System.out.printf(WRONG, card.getDefinition());
+        }
     }
 }
